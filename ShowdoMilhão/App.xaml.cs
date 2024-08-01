@@ -17,10 +17,36 @@ namespace ShowdoMilhão
                     new Alternativa { Correta = false, Descricao = "GASOSO" },
                     new Alternativa { Correta = false, Descricao = "VAPOROSO"}
                 }
+            },
 
-            }
+            new Pergunta
+            {
+                Id = 2,
+                Enunciado = "Quem é o patrono do exército brasileiro?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = true, Descricao = "Marechal Deodoro"},
+                    new Alternativa { Correta = false, Descricao = "Marquês de Pombal" },
+                    new Alternativa { Correta = false, Descricao = "Duque de Caixias" },
+                    new Alternativa { Correta = false, Descricao = "Barão de Mauá" }
+            },
+
+            new Pergunta
+            {
+                Id = 3, 
+                Enunciado = "Qual é o santo casamenteiro?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = false, Descricao = "São Pedro" },
+                    new Alternativa { Correta = false, Descricao = "São Paulo" },
+                    new Alternativa { Correta = true, Descricao = "Santo Antônio" },
+                    new Alternativa { Correta = false, Descricao = "São João" }
+                },
+            
 
         };
+
+
 
         public App()
         {
