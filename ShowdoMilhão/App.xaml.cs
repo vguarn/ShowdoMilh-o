@@ -1,4 +1,5 @@
-﻿using Microsoft.CSharp.RuntimeBinder;
+﻿using Android.OS;
+using Microsoft.CSharp.RuntimeBinder;
 using ShowdoMilhão.Models;
 
 namespace ShowdoMilhão
@@ -195,7 +196,7 @@ namespace ShowdoMilhão
                     new Alternativa { Correta = true, Descricao = "VERMELHA" }
                 }  
             }
-        };
+        },
 
         List<Pergunta>perguntas_medias = new ()
         { 
@@ -286,6 +287,196 @@ namespace ShowdoMilhão
                      new Alternativa { Correta = false, Descricao = "CARLOS GALHARDO" }
                  }
             },
+
+            new Pergunta
+            {
+                Id =8,
+                Enunciado = "Qual é a letra do alfabeto que simboliza o número dez em algarismo romano?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = false, Descricao = "V"},
+                    new Alternativa { Correta=false, Descricao="D"},
+                    new Alternativa { Correta = false, Descricao= "L" },
+                    new Alternativa { Correta = true, Descricao = "X" }
+                }
+
+            },
+
+            new Pergunta
+            {
+                Id =9,
+                Enunciado = "A que categoria pertence o cavalo-marinho?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = false, Descricao ="MULUSCOS" },
+                    new Alternativa { Correta = true, Descricao = "PEIXE" },
+                    new Alternativa { Correta = false, Descricao = "CRUSTÁCEO" },
+                    new Alternativa { Correta = false, Descricao = "MAMÍFERO" }
+                }
+            },
+
+            new Pergunta
+            {
+                Id =10,
+                Enunciado = "Em que cidade foram realizados os jogos olímpicos de 2000?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = false, Descricao = "LONDRES"},
+                    new Alternativa { Correta = false, Descricao = "ATLANTA" },
+                    new Alternativa { Correta = false, Descricao = "BEIJING" },
+                    new Alternativa { Correta = true, Descricao = "SYDNEY"}
+                }
+            },
+
+            new Pergunta
+            {
+                Id = 11,
+                Enunciado = "Qual foi o último imperador do Brasil?",
+                Alternativas = new()
+                {
+                    new Alternativa { Correta = true, Descricao = "D. PEDRO II"},
+                    new Alternativa { Correta = false, Descricao = "D. PEDRO I" },
+                    new Alternativa { Correta = false, Descricao = "D. JOÃO VI" },
+                    new Alternativa { Correta = false, Descricao = "DEODORO DA FONSECA" }
+                }
+            }, 
+
+            new Pergunta
+            {
+                Id=12,
+                Enunciado = "Por que nome são conhecidas as pessoas do Pólo Ártico?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = false, Descricao = "SULISTAS"},
+                    new Alternativa {Correta = true, Descricao = "ESQUIMÓS" },
+                    new Alternativa {Correta = false, Descricao = "NORTISTAS" },
+                    new Alternativa {Correta = false, Descricao = "POLARES"}
+                }
+            },
+
+            new Pergunta
+            {
+                Id=13,
+                Enunciado = "Qual é a capital do Estado de Mato Grosso do Sul?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = false, Descricao = "CUIABÁ" },
+                    new Alternativa {Correta = false, Descricao = "VÁRZEA GRANDE" },
+                    new Alternativa { Correta = false, Descricao = "RONDONÓPOLIS" },
+                    new ALternativa {Correta = true, Descricao = "CAMPO GRANDE" }
+                },
+
+            new Pergunta
+            {
+                Id=14,
+                Enunciado = "Teresina é a capital de qual estado brasileiro?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = false, Descricao = "TOCANTINS"},
+                    new Alternativa {Correta = true, Descricao = "PIAUÍ" },
+                    new Alternativa {Correta = false, Descricao = "ACRE" },
+                    new Alternativa {Correta = false, Descricao = "PARANÁ"}
+                }
+            },
+
+            new Pergunta
+            {
+                Id= 15,
+                Enunciado = "Em que ano ocorreu o incêndio do edifício Joelma, na cidade de São Paulo?",
+                Alternativas= new()
+                {
+                    new Alternativa {Correta = false, Descricao = "1971" },
+                    new Alternativa {Correta = false, Descricao = "1972" },
+                    new Alternativa {Correta = false, Descricao = "1973" },
+                    new Alternativa {Correta = true, Descricao = "1974" }
+                }
+            },
+            
+        List<Pergunta>perguntas_dificeis  = new()
+        {
+            new Pergunta
+            {
+                Id = 1,
+                Enunciado = "O que são meninges?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = true, Descricao = "MEMBRANA" },
+                    new Alternativa {Correta = false, Descricao = "CÉLULAS"},
+                    new Alternativa {Correta = false, Descricao = "MÚSCULOS" },
+                    new Alternativa {Correta = false, Descricao = "NERVOS" }
+                }
+            },
+
+            new Pergunta
+            {
+                Id = 2,
+                Enunciado = "Qual presidente brasileiro instituiu o AI-5?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = true, Descricao = "COSTA E SILVA" },
+                    new Alternativa {Correta = false, Descricao = "ERNESTO GEISEL" },
+                    new Alternativa {Correta = false, Descricao = "JOÃO FIGUEIREDO" },
+                    new Alternativa {Correta = false, Descricao = "ITAMAR FRANCO" }
+                }
+            },
+
+            new Pergunta
+            {
+                Id=3,
+                Enunciado = "Os nazistas foram julgados em:",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = false, Descricao = "BERLIM"},
+                    new Alternativa {Correta = true, Descricao = "NUREMBERGUE" },
+                    new Alternativa {Correta = false, Descricao = "MUNIQUE"},
+                    new Alternativa {Correta = false, Descricao = "PARIS"}
+                }
+            },
+
+            new Pergunta
+            {
+                Id= 4,
+                Enunciado = "Qual oceano tem o maior volume de água?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = true, Descricao = "PACÍFICO"},
+                    new Alternativa {Correta = false, Descricao = "ATLÂNTICO"},
+                    new Alternativa {Correta = false, Descricao = "ÍNDICO" },
+                    new Alternativa {Correta = false, Descricao = "ÁRTICO" }
+                }
+            },
+
+            new Pergunta
+            {
+                Id = 5,
+                Enunciado = "Qual o símbolo químico do radônio?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = false, Descricao = "Rr"},
+                    new Alternativa {Correta = false, Descricao = "Rd"},
+                    new Alternativa {Correta = true, Descricao = "Rn"},
+                    new Alternativa {Correta = false, Descricao = "Ro" }
+
+                },
+
+            new Pergunta
+            {
+                Id = 6,
+                Enunciado = "Como é chamada a bola de gelo e poeira que orbita em torno do sol?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = true, Descricao = "COMETA"},
+                    new Alternativa {Correta = false, Descricao = "METEORITO" },
+                    new Alternativa {Correta = false, Descricao = "CAMADA DE OZÔNIO" },
+                    new Alternativa {Correta = false, Descricao = "ESTRELA D'ALVA" }
+                }
+            },
+
+            }
+             
+        }
+
+
 
         }
 
