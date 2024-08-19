@@ -6,7 +6,7 @@ namespace ShowdoMilhão
 {
     public partial class App : Application
     {
-        List<Pergunta> perguntas_faceis = new()
+        static List<Pergunta> perguntas_faceis = new()
         {
             new Pergunta
             {
@@ -31,11 +31,12 @@ namespace ShowdoMilhão
                     new Alternativa { Correta = false, Descricao = "MARQUÊS DE POMBAL" },
                     new Alternativa { Correta = false, Descricao = "DUQUE DE CAIXIAS" },
                     new Alternativa { Correta = false, Descricao = "BARÃO DE MAUÁ" }
+                }
             },
 
             new Pergunta
             {
-                Id = 3, 
+                Id = 3,
                 Enunciado = "Qual é o santo casamenteiro?",
                 Alternativas = new()
                 {
@@ -43,11 +44,12 @@ namespace ShowdoMilhão
                     new Alternativa { Correta = false, Descricao = "SÃO PAULO" },
                     new Alternativa { Correta = true, Descricao = "SANTO ANTÔNI" },
                     new Alternativa { Correta = false, Descricao = "SÃO JOÃO" }
-                },
+                }
+            },
 
             new Pergunta
             {
-                Id= 4, 
+                Id= 4,
                 Enunciado = "Quem é a esposa do Mickey?",
                 Alternativas = new()
                 {
@@ -55,11 +57,11 @@ namespace ShowdoMilhão
                     new Alternativa { Correta = true, Descricao = "MINNIE" },
                     new Alternativa { Correta = false, Descricao = "A PEQUENA SEREIA" },
                     new Alternativa { Correta = false, Descricao = "OLÍVIA PALTO" }
-
+                }
             },
 
-            new Pergunta 
-            { 
+            new Pergunta
+            {
                 Id= 5,
                 Enunciado = "Quem foi o amor do imperador Marco Antônio?",
                 Alternativas = new()
@@ -68,11 +70,12 @@ namespace ShowdoMilhão
                  new Alternativa { Correta = false, Descricao = "LADY GODIVA" },
                  new Alternativa { Correta = true, Descricao = "CLEÓPATRA" },
                  new Alternativa { Correta = false, Descricao = "JULIETA" }
-                },
+                }
+            },
 
             new Pergunta
             {
-                Id = 6, 
+                Id = 6,
                 Enunciado = "O violoncelo é um instrumento de? ",
                 Alternativas = new()
                 {
@@ -85,7 +88,7 @@ namespace ShowdoMilhão
 
             new Pergunta
             {
-                Id = 7, 
+                Id = 7,
                 Enunciado = "Quem fundou a Microsoft?",
                 Alternativas = new()
                 {
@@ -109,7 +112,7 @@ namespace ShowdoMilhão
                 }
             },
 
-            new Pergunta 
+            new Pergunta
             {
                 Id = 9,
                 Enunciado = "Quantas folhas tem um trevo da sorte?",
@@ -122,7 +125,7 @@ namespace ShowdoMilhão
                 }
             },
 
-            new Pergunta 
+            new Pergunta
             {
                 Id = 10,
                 Enunciado = "Qual é a cidade que é conhecida como: terra da garoa?",
@@ -147,7 +150,7 @@ namespace ShowdoMilhão
                     new Alternativa { Correta = false, Descricao = "INFANTOLOGIA" }
                 }
             },
-             
+
             new Pergunta
             {
                 Id = 12,
@@ -167,11 +170,13 @@ namespace ShowdoMilhão
                 Enunciado = "Qual desses é considerado o mês das noivas?",
                 Alternativas= new()
                 {
-                    new Alternativa { Correta = false, Descricao = "JUNHO" }, 
+                    new Alternativa { Correta = false, Descricao = "JUNHO" },
                     new Alternativa { Correta = true, Descricao = "MAIO" },
                     new Alternativa { Correta = false, Descricao = "SETEMBRO" },
-                    new Alternativa { Correta = false, Descricao = "OUTUBRO" }        
-                }, 
+                    new Alternativa { Correta = false, Descricao = "OUTUBRO" }
+                },
+            },
+
             new Pergunta
             {
                 Id=14,
@@ -183,7 +188,8 @@ namespace ShowdoMilhão
                     new Alternativa{ Correta = false, Descricao = "MARCONI" },
                     new Alternativa{ Correta = false, Descricao = "GEORGE WASHINGTON" }
                 }
-            }, 
+            },
+
             new Pergunta
             {
                 Id =15,
@@ -194,24 +200,25 @@ namespace ShowdoMilhão
                     new Alternativa { Correta = false, Descricao = "VERDE" },
                     new Alternativa { Correta = false, Descricao = "AMARELA" },
                     new Alternativa { Correta = true, Descricao = "VERMELHA" }
-                }  
+                }
             }
-        },
+        };
 
-        List<Pergunta>perguntas_medias = new ()
-        { 
+        static List<Pergunta> perguntas_medias = new()
+        {
             new Pergunta
             {
-                Id = 1, 
+                Id = 1,
                 Enunciado = "Que imperador pôs fogo em Roma?",
                 Alternativas = new()
                 {
-                new Alternativa { Correta = false, Descricao = "TRAJANO" },
-                new Alternativa { Correta = true, Descricao = "NERO" },
-                new Alternativa { Correta = false, Descricao = "BRUTUS" }, 
-                new Alternativa { Correta = false, Descricao = "CALÍGULA"
+                    new Alternativa { Correta = false, Descricao = "TRAJANO" },
+                    new Alternativa { Correta = true, Descricao = "NERO" },
+                    new Alternativa { Correta = false, Descricao = "BRUTUS" },
+                    new Alternativa { Correta = false, Descricao = "CALÍGULA" }
                 }
-            }, 
+            },
+
             new Pergunta
             {
                 Id = 2,
@@ -229,7 +236,7 @@ namespace ShowdoMilhão
             {
                 Id = 3,
                 Enunciado = "Em qual estádio Pelé marcou seu milésimo gol?",
-                Alternativas = new() 
+                Alternativas = new()
                 {
                     new Alternativa {Correta =  false, Descricao = "MORUMBI" },
                     new Alternativa {Correta = false, Descricao = "PACAEMBU" },
@@ -248,7 +255,8 @@ namespace ShowdoMilhão
                     new Alternativa {Correta = false, Descricao = "SASHIMIS" },
                     new Alternativa {Correta = false, Descricao = "HARAQUIRIS" },
                     new Alternativa {Correta = false, Descricao = "SUMÔS" }
-                },
+                }
+            },
 
             new Pergunta
             {
@@ -263,10 +271,9 @@ namespace ShowdoMilhão
                 }
             },
 
-
             new Pergunta
                 { Id = 6,
-                  Enunciado = "Que rio corta a cidade de Londres, na Inglaterra?" },
+                  Enunciado = "Que rio corta a cidade de Londres, na Inglaterra?",
                   Alternativas = new ()
                   {
                       new Alternativa { Correta = false, Descricao = "SENA"},
@@ -339,7 +346,7 @@ namespace ShowdoMilhão
                     new Alternativa { Correta = false, Descricao = "D. JOÃO VI" },
                     new Alternativa { Correta = false, Descricao = "DEODORO DA FONSECA" }
                 }
-            }, 
+            },
 
             new Pergunta
             {
@@ -363,8 +370,9 @@ namespace ShowdoMilhão
                     new Alternativa {Correta = false, Descricao = "CUIABÁ" },
                     new Alternativa {Correta = false, Descricao = "VÁRZEA GRANDE" },
                     new Alternativa { Correta = false, Descricao = "RONDONÓPOLIS" },
-                    new ALternativa {Correta = true, Descricao = "CAMPO GRANDE" }
-                },
+                    new Alternativa {Correta = true, Descricao = "CAMPO GRANDE" }
+                }
+            },
 
             new Pergunta
             {
@@ -391,8 +399,9 @@ namespace ShowdoMilhão
                     new Alternativa {Correta = true, Descricao = "1974" }
                 }
             },
-            
-        List<Pergunta>perguntas_dificeis  = new()
+         };
+
+        static List<Pergunta> perguntas_dificeis = new()
         {
             new Pergunta
             {
@@ -457,7 +466,8 @@ namespace ShowdoMilhão
                     new Alternativa {Correta = true, Descricao = "Rn"},
                     new Alternativa {Correta = false, Descricao = "Ro" }
 
-                },
+                }
+            },
 
             new Pergunta
             {
@@ -472,13 +482,88 @@ namespace ShowdoMilhão
                 }
             },
 
+            new Pergunta
+            {
+                Id=7,
+                Enunciado = "Em que ano foi inaugurada a estátua do Cristo Redentor no Rio de Janeiro?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = false, Descricao = "1921" },
+                    new Alternativa {Correta = true, Descricao = "1931" },
+                    new Alternativa {Correta = false, Descricao = "1941" },
+                    new Alternativa {correta = false, Descricao = "1951" }
+                }
+            },
+
+            new Pergunta
+            {
+                Id=8,
+                Enunciado = "A que país deve-se viajar para subir o Monte Parnaso?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = false, Descricao = "ITÁLIA"},
+                    new Alternativa {Correta = false, Descricao = "FRANÇA" },
+                    new Alternativa {Correta = true, Descricao = "GRÉCIA" },
+                    new Alternativa {Correta = false, Descricao = "TURQUIA" }
+                }
+            },
+
+            new Pergunta
+            {
+                Id =9,
+                Enunciado = "O que é talude?",
+                Alternativas= new()
+                {
+                    new Alternativa {Correta = false,Descricao = "AVALANCHE DE NEVE" },
+                    new Alternativa {Correta = false, Descricao = "FUNGO" },
+                    new Alternativa {Correta = true, Descricao = "INCLINAÇÃO DE TERRENO" },
+                    new Alternativa {Correta = false, Descricao = "RITO ISLÂMICO" }
+                }
+
+            },
+
+            new Pergunta
+            {
+                Id = 10,
+                Enunciado = "Qual atleta foi desclassificado por uso de doping nas Olimpíadas de 1988?",
+                Alternativas= new()
+                {
+                    new Alternativa{Correta = false, Descricao= "MIKE POWELL" },
+                    new Alternativa{Correta = true, Descricao = "BEN JOHNSON" },
+                    new Alternativa{Correta = false, Descricao = "CARL LEWIS" },
+                    new Alternativa{Correta = false, Descricao= "LINFORD CHRISTIE" }
+                }
             }
-             
+        };
+
+        public static Pergunta getRandowPerguntaFacil()
+        {
+            Random r = new Random();
+
+            int sorteado = r.Next(1, 15);
+
+            return perguntas_faceis[sorteado];
         }
 
+        public static Pergunta getRandowPerguntaMedia()
+        {
+            Random r = new Random();
 
+            int sorteado = r.Next(1, 15);
+
+            return perguntas_medias[sorteado];
+        }
+
+        public static Pergunta getRandowPerguntaDificil()
+        {
+            Random random = new Random();
+
+            int sorteado = random.Next(1, 10);
+
+            return perguntas_dificeis[sorteado];
 
         }
+        
 
 
         public App()
