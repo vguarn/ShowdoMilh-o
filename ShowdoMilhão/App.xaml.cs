@@ -536,6 +536,11 @@ namespace ShowdoMilhão
             }
         };
 
+        static List<Pergunta> pergunta_final = new();
+        {
+          Id= 1,
+          Enunciado = ""
+
         public static Pergunta getRandowPerguntaFacil()
         {
             Random r = new Random();

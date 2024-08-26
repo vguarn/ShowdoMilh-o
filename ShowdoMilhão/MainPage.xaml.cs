@@ -3,6 +3,8 @@
     public partial class MainPage : ContentPage
     {
         int count = 0;
+        double premio = 0;
+        int pergunta_count = 0;
 
         public MainPage()
         {
@@ -13,10 +15,10 @@
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-
+            this.BindingContext = App.getRandowPerguntaFacil();
         }
 
-        private void Button_Clicked_Proxima(object sender, EventArgs e)
+        private async void Button_Clicked_Proxima(object sender, EventArgs e)
         {
             bool acertou = false;
             string resp = "";
@@ -62,7 +64,7 @@
             if (acertou)
             {
                 DisplayAlert("ACERTOU!", resp, "OK");
-                this.BindingContext = App.getRandowPerguntaFacil();
+                avanca_pergunta();
             }
             else
             {
@@ -71,7 +73,30 @@
 
         }
 
+        void avanca_pergunta()
+        {
+            if (pergunta_count <= 5)
+            {
+                premio = premio + 1000;
+                this.BindingContext = App.getRandowPerguntaFacil();
+            }
+
+            if (pergunta_count > 5 && pergunta_count <= 10)
+            {
+                premio = premio + 10000;
+                this.BindingContext = App.getRandowPerguntaMedia();
+            }
+
+            if(pergnta_count > 10 && pergunta_count <15)
+            {
+                premio = premio + 100000;
+                this.BindingContext = App.getRandowPerguntaDificil();
+            }
+        }
+
     }
+
+     
 
 
         
