@@ -536,36 +536,92 @@ namespace ShowdoMilhão
             }
         };
 
-        static List<Pergunta> pergunta_final = new();
+        static List<Pergunta> perguntas_finais = new()
         {
-          Id= 1,
-          Enunciado = ""
+            new Pergunta
+            { Id = 1,
+              Enunciado="Qual a obra de arte mais cara já arrematada em um leilão?",
+              Alternativas = new()
+              {
+                  new Alternativa {Correta = false, Descricao="O GRITO, DE EDVARD MUNCH"},
+                  new Alternativa{Correta = false, Descricao="INTERCÂMBIO, DE WILLEN DE KOONING" },
+                  new Alternativa{Correta =  false, Descricao = "O SONHO, DE PABLO PICASSO" },
+                  new Alternativa{Correta = true, Descricao = "SALVATOR MUNDI, DE LEONARDO DA VINCI" }
+              }
+            },
+
+            new Pergunta 
+            { Id = 2,
+                Enunciado="Qual a maior operação militar da história, que contou com o deslocamento de 3,8 milhões de soldados?",
+                Alternativas = new()
+                {
+                    new Alternativa {Correta = false, Descricao= ""}
+                }
+        }
+
+
+        static List<Pergunta> perguntas_sorteadas = new();
 
         public static Pergunta getRandowPerguntaFacil()
         {
             Random r = new Random();
 
-            int sorteado = r.Next(1, 15);
+            Pergunta pergunta_sorteada;
 
-            return perguntas_faceis[sorteado];
+            while (true)
+            {
+                int sorteado = r.Next(1, 15);
+                pergunta_sorteada = perguntas_faceis[sorteado];
+
+                if (!perguntas_sorteadas.Contains(pergunta_sorteada))
+                {
+                    perguntas_sorteadas.Add(pergunta_sorteada);
+                    break;
+                }
+            }
+            return pergunta_sorteada;
         }
 
         public static Pergunta getRandowPerguntaMedia()
         {
             Random r = new Random();
 
-            int sorteado = r.Next(1, 15);
+            Pergunta pergunta_sorteada;
 
-            return perguntas_medias[sorteado];
+            while (true)
+            {
+                int sorteado = r.Next(1, 15);
+                pergunta_sorteada = perguntas_medias[sorteado];
+
+                if (!perguntas_sorteadas.Contains(pergunta_sorteada))
+                {
+                    perguntas_sorteadas.Add (pergunta_sorteada);
+                    break;
+                }
+            }
+
+            return pergunta_sorteada;
         }
 
         public static Pergunta getRandowPerguntaDificil()
         {
-            Random random = new Random();
+            Random r = new Random();
 
-            int sorteado = random.Next(1, 10);
+            Pergunta pergunta_sorteada;
 
-            return perguntas_dificeis[sorteado];
+            while (true)
+            {
+                int sorteado = r.Next(1, 15);
+                pergunta_sorteada = perguntas_dificeis[sorteado];
+
+                if (!perguntas_sorteadas.Contains(pergunta_sorteada))
+                {
+                    perguntas_sorteadas.Add(pergunta_sorteada);
+                    break;
+                }
+            }
+
+            return pergunta_sorteada;
 
         }
         

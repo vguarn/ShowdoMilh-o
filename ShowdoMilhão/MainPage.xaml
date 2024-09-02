@@ -25,27 +25,39 @@
 
 
 
-                    <StackLayout Spacing="10" Margin="10">
-        <Button Text= "Sortear fácil" Clicked="Button_Clicked" />
-        <Label Text="{Binding Enunciado}"/>
+        <StackLayout Spacing="10" Margin="10">
+                        <Grid ColumnDefinitions="*,*,*"
+                        RowDefinitions="Auto, Auto">
+                            <Label Grid.Column="0" Text="Prêmio:"/>
+                            <Label Grid.Column="1" Text="Nível:"/>
+                            <Label Grid.Column="2" Text="Número da pergunta:";></Label>
 
-        <RadioButton x:Name="alt0"
-                 Content="{Binding Path=Alternativas[0].Descricao}"
-                 Value="{Binding Path=Alternativas[0].Correta}"/>
+                            <Label Grid.Column="0" Grid.Row="1" x:Name="lbl_premio"/>
+                            <Label Grid.Column="1" Grid.Row="1" x:Name="lbl_nivel"/>
+                            <Label Grid.Column="2" Grid.Row="1" x:Name="lbl_pergunta_numero"/>
 
-        <RadioButton x:Name="alt1"
-                        Content="{Binding Path=Alternativas[1].Descricao}"
-                        Value="{Binding Path=Alternativas[1].Correta}"/>
+                        </Grid>
+                        
+            <Button Text= "Sortear fácil" Clicked="Button_Clicked" />
+            <Label Text="{Binding Enunciado}"/>
 
-        <RadioButton x:Name="alt2"
-                        Content="{Binding Path=Alternativas[2].Descricao}"
-                        Value="{Binding Path=Alternativas[2].Descricao}"/>
+            <RadioButton x:Name="alt0"
+                     Content="{Binding Path=Alternativas[0].Descricao}"
+                     Value="{Binding Path=Alternativas[0].Correta}"/>
 
-        <RadioButton x:Name="alt3"
-                        Content="{Binding Path=Alternativas[3].Descricao}"
-                        Value="{Binding Path=Alternativas[3].Correta}"/>
+            <RadioButton x:Name="alt1"
+                            Content="{Binding Path=Alternativas[1].Descricao}"
+                            Value="{Binding Path=Alternativas[1].Correta}"/>
 
-    </StackLayout>
+            <RadioButton x:Name="alt2"
+                            Content="{Binding Path=Alternativas[2].Descricao}"
+                            Value="{Binding Path=Alternativas[2].Descricao}"/>
+
+                        <RadioButton x:Name="alt3"
+                            Content="{Binding Path=Alternativas[3].Descricao}"
+                            Value="{Binding Path=Alternativas[3].Correta}"/>    
+
+                    </StackLayout>
 
     <StackLayout Orientation="Horizontal">
         <Button Text="Parar"/>
