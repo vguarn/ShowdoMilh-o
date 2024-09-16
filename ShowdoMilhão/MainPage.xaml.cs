@@ -3,8 +3,8 @@
     public partial class MainPage : ContentPage
     {
         int count = 0;
-        double premio = 0;
-        int pergunta_count = 0;
+        double premio = 1000;
+        int pergunta_count = 1;
 
         public MainPage()
         {
@@ -57,7 +57,7 @@
                 if((bool)alt3.Value)
                 {
                     acertou = true;
-                    resp = alt33.Content.ToString();
+                    resp = alt3.Content.ToString();
                 }
             }
 
@@ -87,7 +87,7 @@
                 this.BindingContext = App.getRandowPerguntaMedia();
             }
 
-            if(pergnta_count > 10 && pergunta_count <15)
+            if(pergunta_count > 10 && pergunta_count <15)
             {
                 premio = premio + 100000;
                 this.BindingContext = App.getRandowPerguntaDificil();
