@@ -570,7 +570,7 @@ namespace ShowdoMilhão
 
             while (true)
             {
-                int sorteado = r.Next(1, 15);
+                int sorteado = r.Next(0, 14);
                 pergunta_sorteada = perguntas_faceis[sorteado];
 
                 if (!perguntas_sorteadas.Contains(pergunta_sorteada))
@@ -590,7 +590,7 @@ namespace ShowdoMilhão
 
             while (true)
             {
-                int sorteado = r.Next(1, 15);
+                int sorteado = r.Next(0, 14);
                 pergunta_sorteada = perguntas_medias[sorteado];
 
                 if (!perguntas_sorteadas.Contains(pergunta_sorteada))
@@ -611,7 +611,7 @@ namespace ShowdoMilhão
 
             while (true)
             {
-                int sorteado = r.Next(1, 15);
+                int sorteado = r.Next(0, 14);
                 pergunta_sorteada = perguntas_dificeis[sorteado];
 
                 if (!perguntas_sorteadas.Contains(pergunta_sorteada))

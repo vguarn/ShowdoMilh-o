@@ -1,4 +1,6 @@
-﻿namespace ShowdoMilhão
+﻿using Metal;
+
+namespace ShowdoMilhão
 {
     public partial class MainPage : ContentPage
     {
@@ -9,6 +11,12 @@
         public MainPage()
         {
             InitializeComponent();
+
+            this.BindingContext = App.getRandowPerguntaFacil();
+
+            lbl_nivel.Text = "Fácil";
+            lbl_premio.Text = premio.ToString("C");
+            lbl_pergunta_numero.Text = pergunta_count.ToString();
         }
 
        
@@ -64,6 +72,7 @@
             if (acertou)
             {
                 DisplayAlert("ACERTOU!", resp, "OK");
+                pergunta_count++;
                 avanca_pergunta();
             }
             else
@@ -79,18 +88,21 @@
             {
                 premio = premio + 1000;
                 this.BindingContext = App.getRandowPerguntaFacil();
+                lbl_nivel.Text = "Fácil";
             }
 
-            if (pergunta_count > 5 && pergunta_count <= 10)
+            if (pergunta_count > 5 && pergunta_count <= 15)
             {
                 premio = premio + 10000;
                 this.BindingContext = App.getRandowPerguntaMedia();
+                lbl_nivel.Text = "Média";
             }
 
             if(pergunta_count > 10 && pergunta_count <15)
             {
                 premio = premio + 100000;
                 this.BindingContext = App.getRandowPerguntaDificil();
+                lbl_nivel.Text = "Difícil";
             }
         }
 
